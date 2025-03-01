@@ -19,9 +19,7 @@ contract BasicNftTest is Test {
     address public constant USER = address(1);
 
     function setUp() public {
-        
-     basicNft = new BasicNft();
-        
+        basicNft = new BasicNft();
     }
 
     function testInitializedCorrectly() public view {

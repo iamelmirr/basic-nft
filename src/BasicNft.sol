@@ -6,7 +6,6 @@ import {ERC721} from "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 
 contract BasicNft is ERC721 {
-
     mapping(uint256 tokenId => string tokenUri) private s_tokenIdToUri;
 
     uint256 private s_tokenCounter;
@@ -21,7 +20,6 @@ contract BasicNft is ERC721 {
         _mint(msg.sender, newTokenId);
 
         s_tokenCounter++;
-
     }
 
     function tokenURI(uint256 tokenId) public view override returns (string memory) {
@@ -31,5 +29,4 @@ contract BasicNft is ERC721 {
     function getTokenCounter() public view returns (uint256) {
         return s_tokenCounter;
     }
-
 }
